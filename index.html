@@ -1,0 +1,74 @@
+<!doctype html>
+<html>
+<head>
+    <meta content="text/html;charset=utf-8" http-equiv="Content-Type">
+<meta content="utf-8" http-equiv="encoding">
+</head>
+<body>
+    <script>
+        function computerPlay(){
+            let AIchoice = Math.floor(Math.random() * 3)
+            if(AIchoice===1){
+               return("rock")
+            }else if(AIchoice===2){
+                return("paper")
+            }else return("scisors")
+        }
+              
+       function playRound(playerSelection, computerSelection){
+           console.log("you chose " + playerSelection)
+           console.log("computer chose " + computerSelection)
+            if(playerSelection === computerSelection){
+               return "tie"
+           } //sci
+            else if(playerSelection === "scisors"){
+
+                if(computerSelection === "paper") {return "win"}
+                else return "loose"}
+            //rock
+            else if(playerSelection === "rock"){
+
+               if(computerSelection === "paper") {return "Loose"}
+               else return "win";}
+            //paper
+            else if(playerSelection === "paper"){
+
+               if(computerSelection === "scisors") {return "Loose"}
+               else return "win";
+           }
+           
+       }
+    
+       function game(){
+        let playercount = 0, AIcount = 0;
+        for(let i= 0; i<5; i++){    
+        let Pchoice = prompt("What is your weapon?");
+        let Achoice = computerPlay();
+        let result = playRound(Pchoice, Achoice);  
+            if(result === "tie") console.log("tie");
+
+                else if(result === "win"){
+                    playercount++;
+                    console.log("you are a winner");
+                }else{
+                    AIcount++;
+                    console.log("computer is a winner ");
+                }
+        }
+            console.log("your score: "+ playercount);
+            console.log("AI score: "+ AIcount);
+                if(playercount == AIcount){
+                    return "its a tie";
+                }else if(playercount>AIcount){
+                    return "YOU WON THIS GAME";
+                }else return "LOOSER";
+          
+        }
+    console.log(game());
+
+      
+    </script>
+
+
+</body>
+</html>
