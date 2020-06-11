@@ -1,0 +1,51 @@
+body {
+    background-color: darkorchid;
+}
+#main{
+    display: flex;
+    justify-content: space-between;
+}
+#choice{
+    display: flex;
+    flex-direction: column;
+    justify-content: left;
+    width: 250px;
+    
+}
+.score{
+    background-color: white;
+    color: black;
+    height: 50px;
+    margin: 10px 0px 50px 0px;
+}
+button{
+    margin: 10px 0px 20px 0px;
+}
+#AIside{
+    display: flex;
+    flex-direction: column;
+    justify-content: right;
+    width: 250px;
+    float: right;
+    
+    
+}
+#fight{
+    display: flex;
+    align-items: center;
+}
+.box{
+    background-color: white;
+    padding:  160px 120px;
+    border: 10px solid black;
+    margin-right: 5px;
+    
+}
+#runda{
+    text-align: center;
+    padding: 30px;
+    background-color: white;
+    margin-left: 400px;
+    margin-right: 400px;
+    margin-top: 20px;
+}
