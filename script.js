@@ -38,37 +38,55 @@ const Ascore = document.querySelector('#Ascore')
         
 
 const buttons = document.querySelectorAll('button');  
-        
+let rundNumber = 1;    
+
+
         buttons.forEach((button) => {                                   //calls a game function on click
             button.addEventListener('click', (e) =>{
                 game(button.id, score);
+                rundNumber++;
             })
         })
 
-        
-
-       
 
 
-    function game(id, count){       
+    function game(id, count){ 
+        const myWin = document.querySelector('#myBox');
+        const AiWin = document.querySelector('#AiBox');      
         let Pchoice = id;
         let Achoice = computerPlay();
         let result = playRound(Pchoice, Achoice);  
-            if(result === "tie") console.log("tie");
+            if(result == "tie") {
+                myWin.textContent = "TIE";
+                AiWin.textContent = "TIE";
+            }
 
-                else if(result === "win"){
+                  if(result == "win"){
                     count[0]++;
                     Pscore.textContent = "Your score is:" + count[0];
-                }else{
+                    myWin.textContent = "You ARE A WINNER OF ROUND "+ rundNumber
+                    AiWin.textContent = "";
+                } 
+                if(result == "Loose"){
                     count[1]++;
                     Ascore.textContent = "AI score is" + count[1];
+                    AiWin.textContent = "You ARE A WINNER OF ROUND "+ rundNumber;
+                    myWin.textContent = "";
                 }
-                return count;
+
+             if(count[0]==5) Pscore.textContent = "WINNER OF THE GAME";
+             if(count[1]==5) Ascore.textContent = "WINNER OF THE GAME";
+
+             const rundCount = document.querySelector('#runda');
+             rundCount.textContent = "ROUND: " + rundNumber; 
+            
+                
+         return count;
+
         }
            
         
-
-
+        
  
 
      

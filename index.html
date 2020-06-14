@@ -8,27 +8,26 @@
 <body>
 <div id="main">
     <div id="choice">
-        <div id="Pscore" class="score">POINTS: </div>
-        <img src="rock.png">
-        <button id="rock">rock</button>
-        <img src="paper.png">
-        <button id="paper">paper</button>
-
-        <img src="sci.png">
-        <button id="scisors"> scisors</button>
+        <div id="Pscore" class="score">0</div>
+        <img class="highlight" src="rock.png">
+        <button id="rock">ROCK</button>
+        <img class="highlight" src="paper.png">
+        <button id="paper">PAPER</button>
+        <img class="highlight" src="sci.png">
+        <button id="scisors">SCISSORS</button>
     </div>
 
     <div id="fight">
-        <div class="box">
-            my weapon
+        <div class="box" id="myBox">
+            
         </div>
-        <div class="box">
-            your weapon
+        <div class="box" id="AiBox">
+            
         </div>
     </div>
 
     <div id="AIside">
-        <div id="Ascore" class="score"> </div>
+        <div id="Ascore" class="score">0</div>
         <img src="rock.png">
         <img src="paper.png">
         <img src="sci.png">
@@ -36,9 +35,8 @@
     <script src="script.js"></script>
 
 </div>
-
-<div id="runda">
-    score
-</div>
+<footer>
+<div id="runda">ROUND:</div>
+</footer>
 </body>
 </html>

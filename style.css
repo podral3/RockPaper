@@ -1,5 +1,5 @@
 body {
-    background-color: darkorchid;
+    background: linear-gradient(to bottom right, #FF00E0, #FEF587);
 }
 #main{
     display: flex;
@@ -19,6 +19,7 @@ body {
     margin: 10px 0px 50px 0px;
 }
 button{
+    background-color: lightgreen;
     margin: 10px 0px 20px 0px;
 }
 #AIside{
@@ -27,8 +28,7 @@ button{
     justify-content: right;
     width: 250px;
     float: right;
-    
-    
+
 }
 #fight{
     display: flex;
@@ -39,13 +39,41 @@ button{
     padding:  160px 120px;
     border: 10px solid black;
     margin-right: 5px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 20px;
     
 }
 #runda{
     text-align: center;
-    padding: 30px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 30px;
+    padding: 20px 80px 20px 80px;
     background-color: white;
     margin-left: 400px;
     margin-right: 400px;
-    margin-top: 20px;
+    margin-top: 0px;
+    border: thick double #41F906;
+    
+}
+.highlight:hover{
+    -webkit-filter: drop-shadow(5px 5px 0 yellow)
+    drop-shadow(-5px -5px 0 yellow);
+    filter: drop-shadow(5px 5px 0 yellow)
+    drop-shadow(-5px -5px 0 yellow);
+}  
+
+#me{
+    text-align: left;
+    padding-right: 50px;
+}
+#AI{
+   text-align: right;
+   padding-left: 50px;
+}
+
+.score{
+    border: 10px ridge #778CEC;
+    text-align: center;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif ;
+    font-size: 20px;
 }
