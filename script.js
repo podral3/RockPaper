@@ -70,7 +70,7 @@ let rundNumber = 1;
                 if(result == "Loose"){
                     count[1]++;
                     Ascore.textContent = "AI score is" + count[1];
-                    AiWin.textContent = "You ARE A WINNER OF ROUND "+ rundNumber;
+                    AiWin.textContent = "COMPUTER IS A WINNER OF ROUND "+ rundNumber + "\n hE CHOSE " + Achoice; 
                     myWin.textContent = "";
                 }
 
